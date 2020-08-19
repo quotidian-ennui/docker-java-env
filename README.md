@@ -1,8 +1,10 @@
-# docker-java-env
+# docker-java-env [![Docker Build](https://img.shields.io/docker/cloud/automated/lewinc/docker-java-env)](https://hub.docker.com/r/lewinc/docker-java-env/) [![Docker Build Status](https://img.shields.io/docker/cloud/build/lewinc/docker-java-env)](https://hub.docker.com/r/lewinc/docker-java-env/) [![Image Size](https://img.shields.io/docker/image-size/lewinc/docker-java-env)](https://hub.docker.com/r/lewinc/docker-java-env/) [![Latest Tag](https://img.shields.io/docker/v/lewinc/docker-java-env?sort=semver)](https://hub.docker.com/r/lewinc/docker-java-env/)
+
 Just a simple Dockerfile that allows you to bootstrap a docker based java build environment for ant+ivy, maven, and gradle (using the gradle wrapper). It's not very interesting to be honest, all the hard work has been done by the maven maintainers.
 
-* maven:3.5.2-alpine is the base image
-* apache-ant is available as an apk already.
+* ~~maven:3.5.2-alpine is the base image~~
+* maven:3.6.3-amazoncorreto-8 is the base image...
+* apache-ant is available via yum.
 * gradle we just run via the gradle wrapper.
 
 ```

@@ -1,6 +1,9 @@
-FROM maven:3.6.1-jdk-8-alpine
+FROM maven:3.6.3-amazoncorretto-8
 
-RUN apk add --no-cache --update apache-ant bash wget unzip && \
+RUN yum -y update && \
+    yum -y install ant wget unzip && \
+    yum -y clean all && \
+    rm -rf /var/cache/yum/* && \
     mkdir /src
 
 VOLUME /src
